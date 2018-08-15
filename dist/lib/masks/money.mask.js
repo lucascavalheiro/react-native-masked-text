@@ -6,7 +6,8 @@ separator:',',
 delimiter:'.',
 unit:'R$',
 suffixUnit:'',
-zeroCents:false};var
+zeroCents:false,
+spaceBeforeSuffix:true};var
 
 
 MoneyMask=function(_BaseMask){_inherits(MoneyMask,_BaseMask);function MoneyMask(){_classCallCheck(this,MoneyMask);return _possibleConstructorReturn(this,(MoneyMask.__proto__||Object.getPrototypeOf(MoneyMask)).apply(this,arguments));}_createClass(MoneyMask,[{key:'getValue',value:function getValue(

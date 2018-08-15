@@ -113,6 +113,17 @@ test('1 suffixUnit $$$ results R$0,01', () => {
     expect(received).toBe(expected)
 })
 
+test('1 suffixUnit $$$ with spaceBeforeSuffix false results R$0,01', () => {
+    var mask = new MoneyMask()
+    var expected = 'R$0,01$$$'
+    var received = mask.getValue('1', {
+        suffixUnit: '$$$',
+        spaceBeforeSuffix: false,
+    })
+
+    expect(received).toBe(expected)
+})
+
 test('1 zeroCents results R$1,00', () => {
     var mask = new MoneyMask()
     var expected = 'R$1,00'

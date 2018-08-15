@@ -21,13 +21,14 @@ return true;
 },
 mergeMoneyOptions=function mergeMoneyOptions(opts){
 opts=opts||{};
+var beforeSuffix=opts.spaceBeforeSuffix!==false?" ":"";
 opts={
 precision:opts.hasOwnProperty("precision")?opts.precision:2,
 separator:opts.separator||",",
 delimiter:opts.delimiter||".",
 unit:opts.unit?opts.unit+' ':"",
 
-suffixUnit:opts.suffixUnit&&" "+opts.suffixUnit.replace(/[\s]/g,'')||"",
+suffixUnit:opts.suffixUnit&&beforeSuffix+opts.suffixUnit.replace(/[\s]/g,'')||"",
 zeroCents:opts.zeroCents,
 lastOutput:opts.lastOutput};
 
